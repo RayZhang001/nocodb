@@ -17,33 +17,35 @@
         <v-tooltip bottom>
           <template #activator="{ on }">
             <v-btn to="/projects" icon class="pa-1 brand-icon" v-on="on">
-              <v-img :src="logo" max-height="30px" max-width="30px" />
+<!--              <v-img :src="logo" max-height="30px" max-width="30px" />-->
               <!-- <v-icon color="primary">alpha-x-circle</v-icon
               ><v-icon color="primary">alpha-c-circle </v-icon> -->
+              Home
             </v-btn>
           </template>
-          Home
-          <span
-            class="caption ml-1 font-weight-light"
-          >(v{{
-            $store.state.project.projectInfo && $store.state.project.projectInfo.version
-          }})</span>
+<!--          <span-->
+<!--            class="caption ml-1 font-weight-light"-->
+<!--          >(v{{-->
+<!--            $store.state.project.projectInfo && $store.state.project.projectInfo.version-->
+<!--          }})</span>-->
         </v-tooltip>
         <template>
-          <span class="title"> {{ brandName }}</span>
+<!--          <span class="title"> {{ brandName }}</span>-->
+          <span class="title"> Team 7 </span>
+
         </template>
       </v-toolbar-title>
 
       <v-toolbar-items class="ml-3">
-        <gh-btns-star
-          icon="mark-github"
-          slug="nocodb/nocodb"
-          show-count
-          class="mr-3 align-self-center"
-        >
-          {{ ghStarText }}
-        </gh-btns-star>
-        <a class="caption font-weight-bold ml-1 mr-2 white--text" href="https://docs.nocodb.com" target="_blank">Docs</a>
+<!--        <gh-btns-star-->
+<!--          icon="mark-github"-->
+<!--          slug="nocodb/nocodb"-->
+<!--          show-count-->
+<!--          class="mr-3 align-self-center"-->
+<!--        >-->
+<!--          {{ ghStarText }}-->
+<!--        </gh-btns-star>-->
+        <a class="caption font-weight-bold ml-1 mr-2 white--text" href="https://xueyangli.clicdata.com/#/dashboard/viewer/404031" target="_blank">Dashboard</a>
       </v-toolbar-items>
       <!-- <template v-if="!isThisMobile ">
 
@@ -120,27 +122,27 @@
             Change theme (^⇧M)
           </v-tooltip>
 
-          <span
-            v-shortkey="[ 'ctrl','shift', 'b']"
-            @shortkey="changeTheme"
-          />
-          <v-tooltip bottom>
-            <template #activator="{ on }">
-              <v-icon
-                v-ripple="{class : 'nc-ripple'}"
-                size="20"
-                class="ml-3"
-                @click="changeTheme"
-                v-on="on"
-              >
-                {{ $vuetify.theme.dark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
-              </v-icon>
-            </template>
-            <span class="caption">
-              {{ $vuetify.theme.dark ? 'Click for light theme' : 'Click for dark theme' }}
-              <i />
-            </span>
-          </v-tooltip>
+<!--          <span-->
+<!--            v-shortkey="[ 'ctrl','shift', 'b']"-->
+<!--            @shortkey="changeTheme"-->
+<!--          />-->
+<!--          <v-tooltip bottom>-->
+<!--            <template #activator="{ on }">-->
+<!--              <v-icon-->
+<!--                v-ripple="{class : 'nc-ripple'}"-->
+<!--                size="20"-->
+<!--                class="ml-3"-->
+<!--                @click="changeTheme"-->
+<!--                v-on="on"-->
+<!--              >-->
+<!--                {{ $vuetify.theme.dark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}-->
+<!--              </v-icon>-->
+<!--            </template>-->
+<!--            <span class="caption">-->
+<!--              {{ $vuetify.theme.dark ? 'Click for light theme' : 'Click for dark theme' }}-->
+<!--              <i />-->
+<!--            </span>-->
+<!--          </v-tooltip>-->
 
           <span
             v-shortkey="[ 'ctrl','shift', 'd']"

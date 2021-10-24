@@ -496,7 +496,7 @@
           align-start
         "
       >
-        <sponsor-mini />
+<!--        <sponsor-mini />-->
       </v-col>
     </v-row>
     <!--        <dlgLabelSubmitCancel-->
@@ -511,144 +511,144 @@
 
     <!--    <dlg-project-create v-model="createProjectDialog"></dlg-project-create>-->
 
-    <div v-if="projects && projects.length" class="d-flex justify-end">
-      <v-list
-        class="
-          flex-shrink-1
-          text-left
-          elevation-4
-          rounded-xl
-          community-card
-          mr-10
-        "
-        width="300"
-        :class="{ active: showCommunity }"
-        dense
-      >
-        <v-list-item
-          dense
-          href="https://github.com/nocodb/nocodb"
-          target="_blank"
-        >
-          <v-list-item-icon>
-            <v-icon class="ml-2 mt-n2">
-              mdi-github
-            </v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>
-            <!-- Star -->
-            {{ $t('projects.show_community_star') }}
-            <v-icon small>
-              mdi-star-outline
-            </v-icon>
-            <!-- us on Github -->
-            {{ $t('projects.show_community_us_on_Github') }}
-          </v-list-item-title>
-        </v-list-item>
-        <v-divider
-          v-if="!_isZh"
-        />
-        <v-list-item
-          v-if="!_isZh"
-          dense
-          target="_blank"
-          href="https://calendly.com/nocodb"
-        >
-          <v-list-item-icon>
-            <v-icon
-              class="ml-2"
-              :color="textColors[3]"
-            >
-              mdi-calendar-month
-            </v-icon>
-          </v-list-item-icon>
-          <!-- Book a Free DEMO -->
-          <v-list-item-title>
-            {{
-              $t('projects.show_community_book_a_free_demo')
-            }}
-          </v-list-item-title>
-        </v-list-item>
-        <v-divider />
-        <v-list-item dense href="https://discord.gg/5RgZmkW" target="_blank">
-          <v-list-item-icon>
-            <v-icon class="ml-2" :color="textColors[0]">
-              mdi-discord
-            </v-icon>
-          </v-list-item-icon>
-          <!-- Get your questions answered -->
-          <v-list-item-title>
-            {{
-              $t('projects.show_community_get_your_questions_answered')
-            }}
-          </v-list-item-title>
-        </v-list-item>
-        <v-divider />
-        <v-list-item
-          v-if="!_isZh"
-          dense
-          href="https://twitter.com/NocoDB"
-          target="_blank"
-        >
-          <v-list-item-icon>
-            <v-icon class="ml-2" :color="textColors[1]">
-              mdi-twitter
-            </v-icon>
-          </v-list-item-icon>
-          <!-- Follow NocoDB -->
-          <v-list-item-title>
-            {{
-              $t('projects.show_community_follow_nocodb')
-            }}
-          </v-list-item-title>
-        </v-list-item>
-        <template v-else>
-          <v-list-item dense class="" @click="$refs.wechat.$el.firstElementChild.click()">
-            <v-list-item-icon>
-              <share-icons
-                ref="wechat"
-                class="small  mr-n2"
-                url="https://github.com/nocodb/nocodb"
-                :social-medias="['wechat']"
-              />
-            </v-list-item-icon>
-            <v-list-item-title>
-              Please share it in Wechat
-            </v-list-item-title>
-          </v-list-item>
-          <v-divider />
-          <v-list-item dense class="" @click="$refs.weibo.$el.firstElementChild.click()">
-            <v-list-item-icon>
-              <share-icons
-                ref="weibo"
-                class="small mr-n2"
-                url="https://github.com/nocodb/nocodb"
-                :social-medias="['weibo']"
-              />
-            </v-list-item-icon>
-            <v-list-item-title>
-              Please share it in Weibo
-            </v-list-item-title>
-          </v-list-item>
-          <v-divider />
-          <v-list-item
-            dense
-            target="_blank"
-          >
-            <v-list-item-icon>
-              <img class="ml-2" src="vue.svg" width="25">
-            </v-list-item-icon>
-            <!-- Follow NocoDB -->
-            <v-list-item-title>
-              Built with Vue JS
-              <!--              {{-->
-              <!--                $t('projects.show_community_follow_nocodb')-->
-              <!--              }}-->
-            </v-list-item-title>
-          </v-list-item>
-        </template>
-      </v-list>
-    </div>
+<!--    <div v-if="projects && projects.length" class="d-flex justify-end">-->
+<!--      <v-list-->
+<!--        class="-->
+<!--          flex-shrink-1-->
+<!--          text-left-->
+<!--          elevation-4-->
+<!--          rounded-xl-->
+<!--          community-card-->
+<!--          mr-10-->
+<!--        "-->
+<!--        width="300"-->
+<!--        :class="{ active: showCommunity }"-->
+<!--        dense-->
+<!--      >-->
+<!--        <v-list-item-->
+<!--          dense-->
+<!--          href="https://github.com/nocodb/nocodb"-->
+<!--          target="_blank"-->
+<!--        >-->
+<!--          <v-list-item-icon>-->
+<!--            <v-icon class="ml-2 mt-n2">-->
+<!--              mdi-github-->
+<!--            </v-icon>-->
+<!--          </v-list-item-icon>-->
+<!--          <v-list-item-title>-->
+<!--            &lt;!&ndash; Star &ndash;&gt;-->
+<!--            {{ $t('projects.show_community_star') }}-->
+<!--            <v-icon small>-->
+<!--              mdi-star-outline-->
+<!--            </v-icon>-->
+<!--            &lt;!&ndash; us on Github &ndash;&gt;-->
+<!--            {{ $t('projects.show_community_us_on_Github') }}-->
+<!--          </v-list-item-title>-->
+<!--        </v-list-item>-->
+<!--        <v-divider-->
+<!--          v-if="!_isZh"-->
+<!--        />-->
+<!--        <v-list-item-->
+<!--          v-if="!_isZh"-->
+<!--          dense-->
+<!--          target="_blank"-->
+<!--          href="https://calendly.com/nocodb"-->
+<!--        >-->
+<!--          <v-list-item-icon>-->
+<!--            <v-icon-->
+<!--              class="ml-2"-->
+<!--              :color="textColors[3]"-->
+<!--            >-->
+<!--              mdi-calendar-month-->
+<!--            </v-icon>-->
+<!--          </v-list-item-icon>-->
+<!--          &lt;!&ndash; Book a Free DEMO &ndash;&gt;-->
+<!--          <v-list-item-title>-->
+<!--            {{-->
+<!--              $t('projects.show_community_book_a_free_demo')-->
+<!--            }}-->
+<!--          </v-list-item-title>-->
+<!--        </v-list-item>-->
+<!--        <v-divider />-->
+<!--        <v-list-item dense href="https://discord.gg/5RgZmkW" target="_blank">-->
+<!--          <v-list-item-icon>-->
+<!--            <v-icon class="ml-2" :color="textColors[0]">-->
+<!--              mdi-discord-->
+<!--            </v-icon>-->
+<!--          </v-list-item-icon>-->
+<!--          &lt;!&ndash; Get your questions answered &ndash;&gt;-->
+<!--          <v-list-item-title>-->
+<!--            {{-->
+<!--              $t('projects.show_community_get_your_questions_answered')-->
+<!--            }}-->
+<!--          </v-list-item-title>-->
+<!--        </v-list-item>-->
+<!--        <v-divider />-->
+<!--        <v-list-item-->
+<!--          v-if="!_isZh"-->
+<!--          dense-->
+<!--          href="https://twitter.com/NocoDB"-->
+<!--          target="_blank"-->
+<!--        >-->
+<!--          <v-list-item-icon>-->
+<!--            <v-icon class="ml-2" :color="textColors[1]">-->
+<!--              mdi-twitter-->
+<!--            </v-icon>-->
+<!--          </v-list-item-icon>-->
+<!--          &lt;!&ndash; Follow NocoDB &ndash;&gt;-->
+<!--          <v-list-item-title>-->
+<!--            {{-->
+<!--              $t('projects.show_community_follow_nocodb')-->
+<!--            }}-->
+<!--          </v-list-item-title>-->
+<!--        </v-list-item>-->
+<!--        <template v-else>-->
+<!--          <v-list-item dense class="" @click="$refs.wechat.$el.firstElementChild.click()">-->
+<!--            <v-list-item-icon>-->
+<!--              <share-icons-->
+<!--                ref="wechat"-->
+<!--                class="small  mr-n2"-->
+<!--                url="https://github.com/nocodb/nocodb"-->
+<!--                :social-medias="['wechat']"-->
+<!--              />-->
+<!--            </v-list-item-icon>-->
+<!--            <v-list-item-title>-->
+<!--              Please share it in Wechat-->
+<!--            </v-list-item-title>-->
+<!--          </v-list-item>-->
+<!--          <v-divider />-->
+<!--          <v-list-item dense class="" @click="$refs.weibo.$el.firstElementChild.click()">-->
+<!--            <v-list-item-icon>-->
+<!--              <share-icons-->
+<!--                ref="weibo"-->
+<!--                class="small mr-n2"-->
+<!--                url="https://github.com/nocodb/nocodb"-->
+<!--                :social-medias="['weibo']"-->
+<!--              />-->
+<!--            </v-list-item-icon>-->
+<!--            <v-list-item-title>-->
+<!--              Please share it in Weibo-->
+<!--            </v-list-item-title>-->
+<!--          </v-list-item>-->
+<!--          <v-divider />-->
+<!--          <v-list-item-->
+<!--            dense-->
+<!--            target="_blank"-->
+<!--          >-->
+<!--            <v-list-item-icon>-->
+<!--              <img class="ml-2" src="vue.svg" width="25">-->
+<!--            </v-list-item-icon>-->
+<!--            &lt;!&ndash; Follow NocoDB &ndash;&gt;-->
+<!--            <v-list-item-title>-->
+<!--              Built with Vue JS-->
+<!--              &lt;!&ndash;              {{&ndash;&gt;-->
+<!--              &lt;!&ndash;                $t('projects.show_community_follow_nocodb')&ndash;&gt;-->
+<!--              &lt;!&ndash;              }}&ndash;&gt;-->
+<!--            </v-list-item-title>-->
+<!--          </v-list-item>-->
+<!--        </template>-->
+<!--      </v-list>-->
+<!--    </div>-->
 
     <input
       v-show="false"

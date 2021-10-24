@@ -62,7 +62,13 @@
           class="caption pt-0 pb-2 justify-center d-100"
           :items="localBreadcrumbs.map(text => ({text}))"
         />
-
+        <v-btn
+          class="write_review"
+          color="primary"
+          @click="write_review"
+          >
+          Review
+        </v-btn>
         <v-container fluid style="height:70vh" class="py-0">
           <v-row class="h-100">
             <v-col class="h-100 px-10" style="overflow-y: auto" cols="8" :offset="isNew || !toggleDrawer ? 2 : 0">
@@ -245,7 +251,7 @@
       </v-card-text>
     </div>
 
-    <v-btn
+    <!-- <v-btn
       v-show="!toggleDrawer"
       class="comment-icon"
       color="primary"
@@ -253,7 +259,7 @@
       @click="toggleDrawer = !toggleDrawer"
     >
       <v-icon>mdi-comment-multiple-outline</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-card>
 </template>
 
@@ -465,6 +471,11 @@ export default {
       } catch (e) {
         this.$toast.error(e.message).goAway(3000)
       }
+    },
+    write_review() {
+      console.log(`${this.localState[this.primaryValueColumn]}`)
+      const asin = this.localState[this.primaryValueColumn]
+      window.location.href = `http://localhost:3001/:asin=${asin}`
     }
   }
 }
@@ -604,6 +615,25 @@ h5 {
 .nc-chip{
   padding:8px;
   border-radius: 8px;
+}
+
+.write_review{
+  // all:unset;
+  // margin-left: auto;
+  // margin-right: auto;
+  // left: 50vw;
+  // right: auto;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%)
+  // all:unset;
+  float: right;
+  z-index: 1000;
+  top: 1em;
+  right:0;
+  left: auto;
+  border-radius: 80px;
 }
 </style>
 <!--

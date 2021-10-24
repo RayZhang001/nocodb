@@ -225,20 +225,20 @@
         mdi-plus-box
       </x-icon>
       <v-spacer />
-      <div
-        class="powered-by align-self-center  grey--text text--lighten-3 d-flex align-center"
-        style="margin-right: 34px;font-size: .65rem ;"
-      >
-        <span>Powered by <a
-          href="https://nocodb.com"
-          target="_blank"
-          class=" white--text"
-          style="text-decoration: none"
-        >NocoDB</a></span>
-        <v-icon x-small class="ml-1 powered-by-close" color="grey lighten-1" @click="upgradeToEE">
-          mdi-close-circle
-        </v-icon>
-      </div>
+<!--      <div-->
+<!--        class="powered-by align-self-center  grey&#45;&#45;text text&#45;&#45;lighten-3 d-flex align-center"-->
+<!--        style="margin-right: 34px;font-size: .65rem ;"-->
+<!--      >-->
+<!--        <span>Powered by <a-->
+<!--          href="https://nocodb.com"-->
+<!--          target="_blank"-->
+<!--          class=" white&#45;&#45;text"-->
+<!--          style="text-decoration: none"-->
+<!--        >NocoDB</a></span>-->
+<!--        <v-icon x-small class="ml-1 powered-by-close" color="grey lighten-1" @click="upgradeToEE">-->
+<!--          mdi-close-circle-->
+<!--        </v-icon>-->
+<!--      </div>-->
     </v-tabs>
 
     <dlg-table-create

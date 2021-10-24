@@ -371,25 +371,25 @@
             </v-list-item>
 
             <template v-if="_isUIAllowed('treeViewProjectSettings')">
-              <v-tooltip bottom>
-                <template #activator="{ on }">
-                  <v-list-item dense class="body-2" @click="appsTabAdd" v-on="on">
-                    <v-list-item-icon>
-                      <v-icon x-small>
-                        mdi-storefront-outline
-                      </v-icon>
-                    </v-list-item-icon>
-                    <!-- App Store -->
-                    <v-list-item-title>
-                      <span class="font-weight-regular caption">{{
-                        $t('treeview.app_store')
-                      }}</span>
-                    </v-list-item-title>
-                  </v-list-item>
-                </template>
-                <!-- App Store -->
-                {{ $t('treeview.app_store') }}
-              </v-tooltip>
+<!--              <v-tooltip bottom>-->
+<!--                <template #activator="{ on }">-->
+<!--                  <v-list-item dense class="body-2" @click="appsTabAdd" v-on="on">-->
+<!--                    <v-list-item-icon>-->
+<!--                      <v-icon x-small>-->
+<!--                        mdi-storefront-outline-->
+<!--                      </v-icon>-->
+<!--                    </v-list-item-icon>-->
+<!--                    &lt;!&ndash; App Store &ndash;&gt;-->
+<!--                    <v-list-item-title>-->
+<!--                      <span class="font-weight-regular caption">{{-->
+<!--                        $t('treeview.app_store')-->
+<!--                      }}</span>-->
+<!--                    </v-list-item-title>-->
+<!--                  </v-list-item>-->
+<!--                </template>-->
+<!--                &lt;!&ndash; App Store &ndash;&gt;-->
+<!--                {{ $t('treeview.app_store') }}-->
+<!--              </v-tooltip>-->
 
               <v-tooltip bottom>
                 <template #activator="{ on }">
@@ -483,57 +483,57 @@
           <!--          </v-list>-->
           <!--          <v-divider></v-divider>-->
 
-          <v-list v-if="_isUIAllowed('previewAs') || previewAs" dense>
-            <v-list-item>
-              <!-- Preview as -->
-              <span class="body-2 grey--text">{{ $t('treeview.preview_as') }}</span>
-              <v-icon small class="ml-1">
-                mdi-drama-masks
-              </v-icon>
-              <!--                <v-icon small>mdi-menu-down</v-icon>-->
-            </v-list-item>
+<!--          <v-list v-if="_isUIAllowed('previewAs') || previewAs" dense>-->
+<!--            <v-list-item>-->
+<!--              &lt;!&ndash; Preview as &ndash;&gt;-->
+<!--              <span class="body-2 grey&#45;&#45;text">{{ $t('treeview.preview_as') }}</span>-->
+<!--              <v-icon small class="ml-1">-->
+<!--                mdi-drama-masks-->
+<!--              </v-icon>-->
+<!--              &lt;!&ndash;                <v-icon small>mdi-menu-down</v-icon>&ndash;&gt;-->
+<!--            </v-list-item>-->
 
-            <v-list dense>
-              <!--              <v-list-item v-for="role in rolesList" @click="setPreviewUSer(role.title)" :key="role.title">-->
-              <!--                <v-icon small class="mr-1" :color="role.title === previewAs ? 'x-active' : ''">{{ roleIcon[role.title] }}</v-icon>-->
-              <!--                <span class="caption text-capitalize"-->
-              <!--                      :class="{ 'x-active&#45;&#45;text' : role.title === previewAs }">{{ role.title }}</span>-->
-              <!--              </v-list-item>-->
-              <div class="mx-4 d-flex align-center mb-2">
-                <template v-for="(role, i) in rolesList">
-                  <!--                  <span v-if="i" vertical :key="i" class="mx-2 caption grey&#45;&#45;text">or</span>-->
-                  <v-divider v-if="i" :key="i" vertical class="mx-2 caption grey--text" />
-                  <div
-                    :key="role.title"
-                    class="pointer text-center"
-                    @click="setPreviewUSer(role.title)"
-                  >
-                    <v-icon
-                      small
-                      class="mr-1"
-                      :color="role.title === previewAs ? 'x-active' : ''"
-                    >
-                      {{ roleIcon[role.title] }}
-                    </v-icon>
-                    <span
-                      class="caption text-capitalize"
-                      :class="{ 'x-active--text': role.title === previewAs }"
-                    >{{ role.title }}</span>
-                  </div>
-                </template>
-              </div>
-              <template v-if="previewAs">
-                <!--                <v-divider></v-divider>-->
-                <v-list-item @click="setPreviewUSer(null)">
-                  <v-icon small class="mr-1">
-                    mdi-close
-                  </v-icon>
-                  <!-- Reset Preview -->
-                  <span class="caption">{{ $t('treeview.reset_review') }}</span>
-                </v-list-item>
-              </template>
-            </v-list>
-          </v-list>
+<!--            <v-list dense>-->
+<!--              &lt;!&ndash;              <v-list-item v-for="role in rolesList" @click="setPreviewUSer(role.title)" :key="role.title">&ndash;&gt;-->
+<!--              &lt;!&ndash;                <v-icon small class="mr-1" :color="role.title === previewAs ? 'x-active' : ''">{{ roleIcon[role.title] }}</v-icon>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <span class="caption text-capitalize"&ndash;&gt;-->
+<!--              &lt;!&ndash;                      :class="{ 'x-active&#45;&#45;text' : role.title === previewAs }">{{ role.title }}</span>&ndash;&gt;-->
+<!--              &lt;!&ndash;              </v-list-item>&ndash;&gt;-->
+<!--              <div class="mx-4 d-flex align-center mb-2">-->
+<!--                <template v-for="(role, i) in rolesList">-->
+<!--                  &lt;!&ndash;                  <span v-if="i" vertical :key="i" class="mx-2 caption grey&#45;&#45;text">or</span>&ndash;&gt;-->
+<!--                  <v-divider v-if="i" :key="i" vertical class="mx-2 caption grey&#45;&#45;text" />-->
+<!--                  <div-->
+<!--                    :key="role.title"-->
+<!--                    class="pointer text-center"-->
+<!--                    @click="setPreviewUSer(role.title)"-->
+<!--                  >-->
+<!--                    <v-icon-->
+<!--                      small-->
+<!--                      class="mr-1"-->
+<!--                      :color="role.title === previewAs ? 'x-active' : ''"-->
+<!--                    >-->
+<!--                      {{ roleIcon[role.title] }}-->
+<!--                    </v-icon>-->
+<!--                    <span-->
+<!--                      class="caption text-capitalize"-->
+<!--                      :class="{ 'x-active&#45;&#45;text': role.title === previewAs }"-->
+<!--                    >{{ role.title }}</span>-->
+<!--                  </div>-->
+<!--                </template>-->
+<!--              </div>-->
+<!--              <template v-if="previewAs">-->
+<!--                &lt;!&ndash;                <v-divider></v-divider>&ndash;&gt;-->
+<!--                <v-list-item @click="setPreviewUSer(null)">-->
+<!--                  <v-icon small class="mr-1">-->
+<!--                    mdi-close-->
+<!--                  </v-icon>-->
+<!--                  &lt;!&ndash; Reset Preview &ndash;&gt;-->
+<!--                  <span class="caption">{{ $t('treeview.reset_review') }}</span>-->
+<!--                </v-list-item>-->
+<!--              </template>-->
+<!--            </v-list>-->
+<!--          </v-list>-->
 
           <!--  <v-list dense>
 

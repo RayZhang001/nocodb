@@ -301,7 +301,7 @@
             mdi-close-circle-outline
           </v-icon>
 
-          <extras />
+<!--          <extras />-->
         </div>
         <!--<div class="text-center">
           <v-hover >
